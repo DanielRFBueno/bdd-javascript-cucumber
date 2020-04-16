@@ -16,14 +16,14 @@ function pratoDoDia (dia) {
     }
 }
 
-Given('que hoje é {string}', (dia) => {
+Given('que hoje é {string}', function (dia) {
     this.hoje = dia;
 });
 
-When('eu pergunto qual é o prato do dia', () => {
+When('eu pergunto qual é o prato do dia', function () {
     this.valorObtido = pratoDoDia(this.hoje);
 });
 
-Then('a resposta deve ser {string}', (valorEsperado) => {
+Then('a resposta deve ser {string}', function (valorEsperado) {
     assert.equal(this.valorObtido, valorEsperado);
 });
